@@ -27,7 +27,7 @@ def index():
 
         if file and allowed_files(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(BASE_PATH, '/Users/chongthamkaj/OneDrive - Microsoft 365/pythonscript/sushila/upload', filename))
+            file.save(os.path.join(BASE_PATH, '/upload', filename))
             flash('File Uploaded Successully')
             return redirect(url_for('download'))
 
